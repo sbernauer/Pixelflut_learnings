@@ -18,3 +18,6 @@
 
 `iptables -L INPUT -v --line-numbers` gives line number.
 Ddelete with `iptables -D INPUT <number>`
+
+## Client
+Kill client connections: `ss -K dst 127.0.0.1 dport = 1234`
