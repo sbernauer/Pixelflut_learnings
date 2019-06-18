@@ -12,6 +12,9 @@
 ### create
 `iptables -t filter -I INPUT -p tcp --syn --dport 1234 -m connlimit --connlimit-above 10 --connlimit-mask 32 -j DROP`. Create Rule for 10 connections per ip
 
+`iptables -t filter -I INPUT -p tcp --syn --dport 1234 -m connlimit --connlimit-above 10 --connlimit-mask 32 -j REJECT --reject-with tcp-reset` Some more fancy limitiation with reset
+
+
 `iptables -L INPUT -v`. show statistiks
 
 ### delete
