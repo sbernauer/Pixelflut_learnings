@@ -24,3 +24,9 @@ Ddelete with `iptables -D INPUT <number>`
 
 ## Client
 Kill client connections: `ss -K dst 127.0.0.1 dport = 1234`
+
+
+## Ausprobieren mit echter NIC:
+MTU bei 1500 lassen und Segmentation Offload ausprobieren
+Anzahl Queues ausprobieren
+Spectre und Meltdown-Patches deaktivieren
