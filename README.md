@@ -25,6 +25,16 @@ Ddelete with `iptables -D INPUT <number>`
 ## Client
 Kill client connections: `ss -K dst 127.0.0.1 dport = 1234`
 
+# Queues and Interrupts
+## Show interupts:
+`cat /proc/interrupts`
+or: `ls /sys/class/net/enp3s0f0/queues/`
+
+## Set amount of queues
+`ethtool -L enp3s0f0 rx 4`
+
+## Cpu-binding for queues
+`cat /sys/class/net/enp3s0f0/device/local_cpulist`
 
 ## Ausprobieren mit echter NIC:
 MTU bei 1500 lassen und Segmentation Offload ausprobieren
