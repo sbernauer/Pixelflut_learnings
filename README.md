@@ -36,6 +36,8 @@ or: `ls /sys/class/net/enp3s0f0/queues/`
 ## Cpu-binding for queues
 `cat /sys/class/net/enp3s0f0/device/local_cpulist`
 
+The package `irqbalance` does balance the interrupts of the queues of the NIC over multiple cpus automatically (see with `cat /proc/interrupts`)
+
 ## Ausprobieren mit echter NIC:
 MTU bei 1500 lassen und Segmentation Offload ausprobieren
 Anzahl Queues ausprobieren
