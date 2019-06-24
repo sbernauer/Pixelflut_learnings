@@ -32,6 +32,7 @@ or: `ls /sys/class/net/enp3s0f0/queues/`
 
 ## Set amount of queues
 `ethtool -L enp3s0f0 rx 4`
+See with `ethtool -l enp3s0f0`
 
 ## Cpu-binding for queues
 `cat /sys/class/net/enp3s0f0/device/local_cpulist`
