@@ -39,6 +39,9 @@ See with `ethtool -l enp3s0f0`
 
 The package `irqbalance` does balance the interrupts of the queues of the NIC over multiple cpus automatically (see with `cat /proc/interrupts`)
 
+# Profiling
+`sudo perf stat -B dd if=/dev/zero of=/dev/null count=10000000`
+
 ## Ausprobieren mit echter NIC:
 - [ ] MTU bei 1500 lassen und Segmentation Offload ausprobieren
 - [ ] Anzahl Queues ausprobieren
